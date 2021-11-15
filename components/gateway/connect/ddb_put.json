@@ -1,0 +1,15 @@
+{
+  "TableName": "SumuConnections",
+  "Item": {
+    "user_id": {
+      "S": "$context.authorizer.principalId"
+    },
+    "connection_id": {
+      "S": "$context.connectionId"
+    },
+    #set($delete_connection_at = ($context.requestTimeEpoch / 1000) + 7200)
+    "delete_at": {
+      "S": "$delete_connection_at"
+    }
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "TableName": "SumuConnections",
+  "Key": {
+    "user_id": {
+      "S": "$context.authorizer.principalId"
+    },
+    "connection_id": {
+      "S": "$context.connectionId"
+    }
+  }
+}

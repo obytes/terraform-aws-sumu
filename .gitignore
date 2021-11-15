@@ -1,0 +1,11 @@
+.terraform
+.idea
+terraform.tfvars
+*.tfstate
+*.backup
+*.zip
+.DS_Store
+.env
+node_modules
+.cache
+dist
