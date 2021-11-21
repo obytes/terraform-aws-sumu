@@ -11,7 +11,7 @@ resource "aws_sqs_queue" "notifications" {
 
   delay_seconds              = 0      # No delay
   max_message_size           = 262144 # 256 KiB
-  receive_wait_time_seconds  = 0      # ReceiveMessage return immediately
+  receive_wait_time_seconds  = 20     # Long Polling not Short Polling
   message_retention_seconds  = 345600 # 4 Days
   visibility_timeout_seconds = 120*6  # 12 minutes, 6 times the lambda timeout (AWS Recommendation)
 
